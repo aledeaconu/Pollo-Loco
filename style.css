@@ -1,0 +1,449 @@
+@font-face {
+  font-family: "whocats";
+  src: URL("./fonts/whocats.ttf") format("truetype");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./img/icons/main_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  min-height: 114vh;
+  background-position: center;
+  overflow: hidden !important;
+
+  font-family: "whocats", Arial, Helvetica, sans-serif;
+}
+
+body h1 {
+  font-size: 44px;
+  letter-spacing: 8px;
+  position: absolute;
+  top: 8%;
+}
+
+.start-screen,
+.game-screen,
+.screen-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  position: absolute;
+  top: 25%;
+}
+
+.start-screen {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.start-screen-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.start-screen-options img {
+  width: 73px;
+  height: 120px;
+  padding-bottom: 48px;
+}
+.start-screen-options img:hover {
+  width: 77px;
+  height: 125px;
+}
+
+.game-screen {
+  z-index: 1;
+}
+
+.canvas-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+canvas {
+  background-color: transparent;
+  border-radius: 1%;
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen-btn-canvas {
+  width: 56px;
+  height: 47px;
+  margin-top: -7px;
+  cursor: pointer;
+}
+
+.instructions {
+  width: 550px;
+  min-height: 2%;
+  background-color: #cce5e2;
+  border-radius: 2%;
+  top: 20%;
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#instructions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#instructions img {
+  width: 100px;
+}
+
+.close-instructions {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 23px;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.instructions button {
+  background-color: transparent;
+  font-family: "whocats";
+  cursor: pointer;
+  border: solid 2px #4a4c0b;
+}
+
+.instructions button:hover {
+  background-color: #aeaf95;
+  border: solid 2px #aeaf95;
+}
+
+.keyboards-icons{
+  display: flex;
+  align-items: center;
+}
+
+.space-and-d {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 22px;
+  margin-bottom: 29px;
+}
+
+.danger-message {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.extra-bottles-message {
+  position: absolute;
+  top: 38%;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  font-size: 10px;
+  text-align: center;
+}
+
+.screen-overlay {
+  width: 639px;
+  height: 480px;
+  z-index: 9999999;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.screen-overlay.game-screen {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: auto;
+  margin-top: 0;
+}
+
+.screen-overlay button {
+  font-family: "whocats";
+  background-color: #fddf00;
+  width: 16%;
+  height: 7%;
+  border-radius: 22%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.screen-overlay button:hover {
+  background-color: #c5b32e;
+  font-size: 14px;
+}
+
+.screen-options {
+  position: absolute;
+  top: 2%;
+  right: 0%;
+  display: flex;
+}
+
+#sound-btn {
+  width: 38px;
+  height: 25px;
+  cursor: pointer;
+}
+#fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./img/icons/main_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#fullscreen-btn {
+  width: 46px;
+  height: 37px;
+  margin-top: -7px;
+  cursor: pointer;
+}
+
+.mobile-controls {
+  position: absolute;
+  width: 100%;
+  bottom: 12px;
+  left: 46px;
+  z-index: 9;
+  display: none;
+  justify-content: space-between;
+}
+
+.mobile-controls img {
+  width: 50px;
+}
+.mobile-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 35%;
+}
+
+.turn-around-phone {
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  background-color: #2697c1;
+  display: none;
+}
+
+.animate-smartphone-rotation {
+  animation-name: animate-smartphone-rotation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.turn-around-phone p {
+  animation-name: slide-in;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.turn-around-phone img {
+  width: 90%;
+}
+
+@keyframes animate-smartphone-rotation {
+  0% {
+    transform: translateX(-100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) rotate(90deg);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(2000%);
+  }
+  100% {
+    transform: translateY(-1500%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .turn-around-phone {
+    display: flex;
+  }
+
+  .game-screen,
+  .canvas,
+  .start-screen,
+  .start-screen-options,
+  .dangerMessage,
+  .extraBottlesMessage,
+  .screen-overlay {
+    display: none !important;
+  }
+
+  .mobile-controls {
+    display: flex;
+  }
+}
+
+@media only screen and (max-height: 300px) {
+ 
+  .turn-around-phone {
+    display: flex;
+  }
+
+  .game-screen,
+  .canvas,
+  .start-screen,
+  .start-screen-options,
+  .dangerMessage,
+  .extraBottlesMessage,
+  .screen-overlay {
+    display: none !important;
+  }
+  .mobile-controls {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  
+  canvas {
+    width: 100%;
+  }
+  .game-screen {
+    left: 1%;
+    right: 1%;
+    top: 0%;
+  
+  }
+  .mobile-controls {
+    display: flex; 
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  .start-screen {
+    top: 40%;
+  }
+  .start-screen h2 {
+    font-size: 20px;
+  }
+  .start-screen-options img {
+    width: 45px;
+    height: 75px;
+  }
+  .screen-overlay {
+    background-size: contain;
+    width: 318px;
+    height: 217px;
+    top: 108px;
+    overflow: visible;
+  }
+
+  .screen-overlay button {
+    width: 23%;
+    height: 12%;
+  }
+  .instructions {
+    top: 2%;
+  }
+  .instructions p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-height: 580px) {
+ 
+  canvas {
+    height: 100vh;
+    left: 1%;
+    right: 1%;
+  }
+  .start-screen h2 {
+    font-size: 20px;
+  }
+  .start-screen-options img {
+    width: 45px;
+    height: 75px;
+  }
+
+  .game-screen {
+    left: 1%;
+    right: 1%;
+    top: 0%;
+    overflow: hidden;
+  }
+
+  .mobile-btns {
+    display: flex; 
+  }
+
+  body h1 {
+    font-size: 20px;
+  }
+
+  .start-screen {
+    top: 40%;
+  }
+
+  .screen-overlay {
+    background-size: contain;
+    width: 318px;
+    height: 217px;
+    top: 108px;
+    overflow: visible;
+  }
+
+  .screen-overlay button {
+    width: 23%;
+    height: 12%;
+  }
+  .instructions {
+    top: 2%;
+  }
+  .instructions p {
+    font-size: 10px;
+  }
+
+  
+}

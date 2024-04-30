@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El pollo locco</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/icons/favicon.png">
+
+    
+  </head>
+  <body>
+    <h1>El pollo loco</h1>
+
+    <div id="gameScreen" class="game-screen">
+      <div id="startScreen" class="start-screen">
+        <div class="start-screen-options" id="startGame" onclick="startGame()">
+          <img src="img/icons/1_start_screen_icon.png" />
+          <div style="margin-left: 40px">
+            <h2>Play!</h2>
+          </div>
+        </div>
+
+        <div class="start-screen-options" onclick="gameInstructions()">
+          <img src="img/icons/2_start_screen_icon.png" />
+          <div style="margin-left: 40px">
+            <h2>Instructions</h2>
+          </div>
+        </div>
+      </div>
+      <div id="instructions"></div>
+     
+      <canvas id="canvas" width="720" height="480"> </canvas>
+
+      <div id="screenOptions"></div>
+      <div id=""></div>
+      
+
+      <div id="dangerMessage" class="danger-message"></div>
+      <div id="extraBottlesMessage" class="extra-bottles-message"></div>
+
+      <div id="endScreen" class="screen-overlay">
+        <button onclick="restartGame()">Restart</button>
+
+        
+      </div>
+    </div>
+
+   
+
+    <div class="turn-around-phone">
+      <div class="animate-smartphone-rotation">
+        <img src="./img/icons/smartphone_rotate.png" />
+      </div>
+
+      <p>Rotate your phone</p>
+    </div>
+  </body>
+
+  <script src="./classes/drawable-objects.class.js"></script>
+  <script src="./classes/moveable-object.class.js"></script>
+  <script src="./classes/colectable-objects.class.js"></script>
+  <script src="./classes/character.class.js"></script>
+  <script src="./classes/chicken.class.js"></script>
+  <script src="./classes/chicken-small.class.js"></script>
+  <script src="./classes/status-bars.class.js"></script>
+  <script src="./classes/status-bar-health.class.js"></script>
+  <script src="./classes/status-bar-coin.class.js"></script>
+  <script src="./classes/status-bar-bottles.class.js"></script>
+  <script src="./classes/status-bar-endboss.class.js"></script>
+  <script src="./classes/coins.class.js"></script>
+  <script src="./classes/bottles.class.js"></script>
+  <script src="./classes/bottles-extra.class.js"></script>
+  <script src="./classes/clouds.class.js"></script>
+  <script src="./classes/world.class.js"></script>
+  <script src="./classes/background-object.class.js"></script>
+  <script src="./classes/keyboard.class.js"></script>
+  <script src="./classes/level.class.js"></script>
+  <script src="./classes/endboss.class.js"></script>
+  <script src="./classes/throwable-objects.class.js"></script>
+  <script src="./levels/level1.js"></script>
+  <script src="./js/audio.js"></script>
+  <script src="./js/game.js"></script>
+</html>
